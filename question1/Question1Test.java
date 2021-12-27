@@ -13,7 +13,7 @@ public class Question1Test {
             int value = scan.nextInt();
 
             if (question1.addUserInput(value)) {
-                System.out.print("The values of the sequence is: ");
+                System.out.print("The values of the sequence are: ");
                 for (var item : question1.getValues()) {
                     System.out.print("[" + item + "]");
                 }

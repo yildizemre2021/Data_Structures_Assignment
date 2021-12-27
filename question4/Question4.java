@@ -1,21 +1,20 @@
 package question4;
 
+import question3.Question3;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import question3.*;
 
 public class Question4 {
     public static List<String> listOfWordsInFile(Path filePath) throws IOException {
 
         String data = Files.readString(filePath);
-        String s = data.replace("\n", " ");
+        String s = data.replaceAll("[\\\r\\\n]+"," ");
 
         List<String> list = new ArrayList<>(Arrays.asList(s.split(" ")));
         for (String string : list) {

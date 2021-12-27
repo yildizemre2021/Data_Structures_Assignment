@@ -6,15 +6,8 @@ import java.util.List;
 
 public class Question4Test {
     public static void main(String[] args) throws IOException {
-        /*
-         * List<String> list = Question4
-         * .listOfWordsInFile(
-         * "C:\\Users\\Emre\\Code\\Java\\Data_Structures_Assignment\\question4\\sample.txt"
-         * );
-         * for (String string : list) {
-         * System.out.println(string);
-         */
-        Path filePath = Path.of("C:\\Users\\Emre\\Code\\Java\\Data_Structures_Assignment\\question4\\sample.txt");
+
+        Path filePath = Path.of("/home/emre/IdeaProjects/Data_Structures_Assignment/question4/sample.txt");
         List<String> listTest = Question4.listOfWordsInFile(filePath);
         System.out.println(listTest.size());
         for (String string : listTest) {
